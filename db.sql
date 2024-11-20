@@ -41,3 +41,16 @@ CREATE TABLE IF NOT EXISTS `##DB_NAME##`.`cours` (
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+INSERT INTO `##DB_NAME##`.`prof` (nom, prenom, datenaiss, lieunaiss)
+VALUES 
+    ('Dupont', 'Jean', '1980-01-01', 'Paris'),
+    ('Martin', 'Luc', '1975-05-10', 'Lyon'),
+    ('Durand', 'Claire', '1982-03-15', 'Marseille');
+
+INSERT INTO `##DB_NAME##`.`cours` (intitule, duree, idprof)
+VALUES 
+    ('Mathématiques', '30h', 1), -- Professeur avec idprof=1
+    ('Physique', '25h', 2),      -- Professeur avec idprof=2
+    ('Chimie', '20h', 3);        -- Professeur avec idprof=3
+
